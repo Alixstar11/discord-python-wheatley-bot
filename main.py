@@ -71,3 +71,45 @@ possible_ratings = [
     "0/10", "1/10", "2/10", "3/10", "4/10", "5/10", "6/10", "7/10", "8/10", "9/10", "10/10", "11/10"
 ]
 
+@client.event
+async def on_message(message):
+  insert = message.author.mention
+  if message.author == client.user:
+    return
+  elif message.content.lower() == 'hello wheatley' or message.content.lower() == 'hi wheatley':
+    quote_hello = random.choice(hello_replies)
+    final_quote_hello = quote_hello.format(insert)
+    await message.channel.send(final_quote_hello)
+  elif message.content.lower() == 'how are you wheatley':
+    await message.channel.send(random.choice(howareyou_replies))
+  elif message.content.lower() == 'apple':
+    await message.channel.send(random.choice(apple_replies))
+  elif message.content.lower() == 'bird':
+    await message.channel.send(random.choice(bird_replies))
+  elif message.content.lower() == 'moron':
+    await message.channel.send(random.choice(moron_replies))
+  elif message.content.lower() == 'good job wheatley':
+    await message.channel.send(random.choice(goodjob_replies))
+  elif message.content.lower() == 'i love you wheatley':
+    quote_iloveyou = random.choice(iloveyou_replies)
+    final_quote_iloveyou = quote_iloveyou.format(insert)
+    await message.channel.send(final_quote_iloveyou)
+  elif message.content.lower() == 'shut up wheatley':
+    await message.channel.send(random.choice(shutup_replies))
+  elif message.content.lower() == 'wheatley whats the password' or message.content.lower() == 'wheatley what is the password':
+    await message.channel.send('"Apple-bagel-unicron."')
+  elif message.content.startswith('WHEATLEY'):
+    await message.channel.send(random.choice(wheatleyscream_replies))
+  elif message.content.lower().startswith('wheatley tf: ') or message.content.lower().startswith('wheatley tf '):
+    await message.channel.send(random.choice(truefalse_replies))
+  elif message.content.lower().startswith('wheatley are you '):
+    if message.content.lower() == 'wheatley are you a pro skater':
+      await message.channel.send("Right, look, I get this one a lot, alright? So I'll simplify it for ya; even if I could disengage myself from my management rail WITHOUT dying in the first place, skateboards... gonna be honest! Aren't exactly my forté! 'case you haven't noticed, I seem to be missing two large requirements for it. Two large, slightly cylindrical... fleshy appendages. ... Is cylindrical right? Nah, they're not tubes, are they? 'S just... muscle and bone, innit?")
+    else:
+      areyou_replies = question_replies_base + question_replies_areyou
+      await message.channel.send(random.choice(areyou_replies))
+  elif message.content.lower().startswith('wheatley can you '):
+      canyou_replies = question_replies_base + question_replies_canyou
+      await message.channel.send(random.choice(canyou_replies))
+  elif message.content.lower().startswith('wheatley can i ') or message.content.lower().startswith('wheatley can we ') or message.content.lower().startswith('wheatley will we '):
+      await message.channel.send(random.choice(question_replies_base))
