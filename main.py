@@ -113,3 +113,13 @@ async def on_message(message):
       await message.channel.send(random.choice(canyou_replies))
   elif message.content.lower().startswith('wheatley can i ') or message.content.lower().startswith('wheatley can we ') or message.content.lower().startswith('wheatley will we '):
       await message.channel.send(random.choice(question_replies_base))
+  elif message.content.lower().startswith('wheatley do you '):
+      doyou_replies = question_replies_base + question_replies_doyou
+      await message.channel.send(random.choice(doyou_replies))
+  elif message.content.lower().startswith('wheatley will you '):
+      willyou_replies = question_replies_base + question_replies_willyou
+      await message.channel.send(random.choice(willyou_replies))
+  elif message.content.lower().startswith('wheatley rate'):
+      await message.channel.send(random.choice(possible_ratings))
+
+client.run(token)
