@@ -1,7 +1,7 @@
 VERSION 1.1
 - Added the variation "wheatley what's the password"
 - Added code for the "say" command; this is currently commented out and therefore unusable
-- Updated the thanks comments at the bottom of the main.py file
+- Updated the thanks comments at the bottom of the main.py file (not visible in Github version)
 
 VERSION 1.0
 - Removed "say" command
