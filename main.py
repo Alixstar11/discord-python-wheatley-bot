@@ -123,3 +123,8 @@ async def on_message(message):
       await message.channel.send(random.choice(possible_ratings))
 
 client.run(token)
+
+#Thanks to Danish for helping me with getting the ping/message.author.mention to work with my reply lists, as well as providing the bot's host server
+#Thanks to my darling boyfriend Finn for providing new and revised dialogue
+#Thanks to Kip for being the original creator of the bot and for being the inspiration for its revival
+#And finally a very special thanks to everyone at Still Alive for being amazing. You all rock!
